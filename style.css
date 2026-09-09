@@ -1,0 +1,902 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #555;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dceeff,
+            #ffe1ed,
+            #eeeeee
+        );
+
+    overflow-x: hidden;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================= OPENING ================= */
+
+.opening {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+.opening h1,
+.opening h2,
+.hero h1,
+section h2,
+footer h2 {
+
+    font-family: 'Dancing Script', cursive;
+
+}
+
+
+.opening h1 {
+
+    font-size: 44px;
+
+    color: #5d8fc9;
+
+    margin: 25px 0 5px;
+
+}
+
+
+.opening h2 {
+
+    font-size: 55px;
+
+    color: #df78a2;
+
+}
+
+
+.opening p {
+
+    color: #777;
+
+}
+
+
+.click-text {
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+}
+
+
+/* ENVELOPE */
+
+.envelope-container {
+
+    cursor: pointer;
+
+}
+
+
+.envelope {
+
+    width: 190px;
+
+    height: 130px;
+
+    position: relative;
+
+    background: #6f9fd3;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.18);
+
+    animation: float 2s infinite ease-in-out;
+
+}
+
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 95px solid transparent;
+
+    border-right: 95px solid transparent;
+
+    border-top: 75px solid #e993b4;
+
+    z-index: 3;
+
+}
+
+
+.envelope-body {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.letter-icon {
+
+    font-size: 55px;
+
+    z-index: 2;
+
+}
+
+
+.opening button {
+
+    margin-top: 20px;
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+button {
+
+    border: none;
+
+    background: #df78a2;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.12);
+
+}
+
+
+button:hover {
+
+    transform: scale(1.06);
+
+    background: #5d8fc9;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.date {
+
+    letter-spacing: 6px;
+
+    color: #777;
+
+}
+
+
+.hero h1 {
+
+    font-size: 70px;
+
+    color: #df78a2;
+
+    margin: 25px 0;
+
+}
+
+
+.hero-name {
+
+    font-size: 22px;
+
+    color: #5d8fc9;
+
+}
+
+
+.scroll {
+
+    margin-top: 70px;
+
+    font-size: 13px;
+
+    color: #777;
+
+    animation: bounce 2s infinite;
+
+}
+
+
+
+/* ================= MUSIC ================= */
+
+.music-section {
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.music-section p {
+
+    margin-top: 12px;
+
+    font-size: 13px;
+
+}
+
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+
+    text-align: center;
+
+}
+
+
+.section-icon {
+
+    font-size: 35px;
+
+}
+
+
+section h2 {
+
+    font-size: 48px;
+
+    color: #5d8fc9;
+
+    margin: 10px 0 25px;
+
+}
+
+
+
+/* ================= LETTER ================= */
+
+.letter-card {
+
+    background: rgba(255,255,255,.9);
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.1);
+
+}
+
+
+.letter-card p {
+
+    margin-bottom: 20px;
+
+}
+
+
+.letter-card strong {
+
+    color: #df78a2;
+
+}
+
+
+.center {
+
+    text-align: center;
+
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-family: 'Dancing Script', cursive;
+
+    color: #df78a2;
+
+    font-size: 28px;
+
+}
+
+
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 650px;
+
+    margin: auto;
+
+}
+
+
+.timeline::before {
+
+    content: '';
+
+    position: absolute;
+
+    left: 25px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 3px;
+
+    background: #b8d3ef;
+
+}
+
+
+.timeline-item {
+
+    position: relative;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+
+    text-align: left;
+
+}
+
+
+.timeline-dot {
+
+    min-width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.12);
+
+}
+
+
+.timeline-card {
+
+    background: rgba(255,255,255,.85);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    flex: 1;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+.timeline-card span {
+
+    color: #df78a2;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+}
+
+
+.timeline-card h3 {
+
+    color: #5d8fc9;
+
+    margin: 8px 0;
+
+}
+
+
+
+/* ================= PHOTOS ================= */
+
+.slideshow {
+
+    position: relative;
+
+    max-width: 650px;
+
+    height: 450px;
+
+    margin: 35px auto 20px;
+
+}
+
+
+.slide {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+
+}
+
+
+.slide.active {
+
+    opacity: 1;
+
+}
+
+
+.slide img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.15);
+
+}
+
+
+.dots span {
+
+    display: inline-block;
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #aaa;
+
+    margin: 5px;
+
+    cursor: pointer;
+
+}
+
+
+.dots span:hover {
+
+    background: #df78a2;
+
+}
+
+
+
+/* ================= COUNTER ================= */
+
+.counter {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin: 35px 0;
+
+    flex-wrap: wrap;
+
+}
+
+
+.counter-box {
+
+    background: white;
+
+    width: 140px;
+
+    padding: 25px 10px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.1);
+
+}
+
+
+.counter-box span {
+
+    display: block;
+
+    font-size: 38px;
+
+    color: #df78a2;
+
+    font-weight: 600;
+
+}
+
+
+.counter-box small {
+
+    color: #777;
+
+}
+
+
+.counting {
+
+    color: #5d8fc9;
+
+}
+
+
+
+/* ================= SURPRISE ================= */
+
+.surprise-card {
+
+    margin: 35px auto;
+
+    max-width: 600px;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.12);
+
+    animation: appear 1s ease;
+
+}
+
+
+.heart-big {
+
+    font-size: 75px;
+
+    animation: heartbeat 1.2s infinite;
+
+}
+
+
+.surprise-card h2 {
+
+    color: #df78a2;
+
+}
+
+
+.surprise-card h3 {
+
+    margin-top: 20px;
+
+    color: #5d8fc9;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 30px;
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+
+.big-infinity {
+
+    font-size: 70px;
+
+}
+
+
+footer h2 {
+
+    font-size: 50px;
+
+    color: #df78a2;
+
+}
+
+
+.footer-hearts {
+
+    margin-top: 30px;
+
+    font-size: 22px;
+
+}
+
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    animation: rise linear forwards;
+
+    z-index: -1;
+
+}
+
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes float {
+
+    0%,100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+}
+
+
+@keyframes bounce {
+
+    0%,100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(10px);
+
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.25);
+
+    }
+
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes rise {
+
+    from {
+
+        transform: translateY(0) rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(-110vh) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px) {
+
+    .hero h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    section h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .letter-card {
+
+        padding: 25px;
+
+    }
+
+
+    .slideshow {
+
+        height: 400px;
+
+    }
+
+
+    .timeline-item {
+
+        gap: 15px;
+
+    }
+
+
+    .timeline-card {
+
+        padding: 18px;
+
+    }
+
+
+    .counter-box {
+
+        width: 100px;
+
+    }
+
+}
